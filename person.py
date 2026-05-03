@@ -25,3 +25,14 @@ class Student(Person):
             point = School.grade_to_value(grade)
             sum += point
         gpa = sum / len(self.subject_grade)
+        self.grade = School.value_to_grade(gpa)
+
+    # rohim .id ==
+    @property
+    def id(self):
+        return self.__id
+    
+    # rohim.id = 12
+    @id.setter
+    def id(self, value):
+        self.__id == value
