@@ -13,7 +13,7 @@ class Teacher(Person):
 class Student(Person):
     def __init__(self, name, classroom):
         super().__init__(name)
-        self.Classroom = classroom # classroom object
+        self.classroom = classroom # classroom object
         self.__id = None
         self.marks = {}  #{"eng" : 78, "ICT" : 90}
         self.subject_grade = {} # {"english" : "A"}
@@ -24,8 +24,12 @@ class Student(Person):
         for grade in self.subject_grade.values():
             point = School.grade_to_value(grade)
             sum += point
-        gpa = sum / len(self.subject_grade)
-        self.grade = School.value_to_grade(gpa)
+        if sum == 0:
+            gpa = 0.00
+            self.grade = 'F'
+        else:
+            gpa = sum / len(self.subject_grade)
+            self.grade = School.value_to_grade(gpa)
 
     # rohim .id ==
     @property
@@ -35,4 +39,4 @@ class Student(Person):
     # rohim.id = 12
     @id.setter
     def id(self, value):
-        self.__id == value
+        self.__id = value

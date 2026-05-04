@@ -62,7 +62,7 @@ class School:
     
     def __repr__(self):
         # All Classroom
-        for key in self.classrooms.key():
+        for key in self.classrooms.keys():
             print(key)
         # All Student
         print("All Students")

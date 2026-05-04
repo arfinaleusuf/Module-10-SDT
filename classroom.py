@@ -7,10 +7,12 @@ class ClassRoom:
         roll_no = f"{self.name} - {len(self.students) + 1}"
         student.id = roll_no
         self.students.append(student)
+        
     def add_subject(self, subject):
         self.subjects.append(subject)
+
     def take_semestar_final_exam(self):
         for subject in self.subjects:
-            subject.exam(self.students)
+            subject.evalute_exam(self.students)
         for student in self.students:
             student.calculate_final_grade()
