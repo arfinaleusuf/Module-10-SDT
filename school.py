@@ -91,3 +91,5 @@ class School:
             for student in value.students:
                 for k, i in student.marks.items():
                     print(student.name,k,i,student.subject_grade[k])
+                print(student.calculate_final_grade())
+        return ''
