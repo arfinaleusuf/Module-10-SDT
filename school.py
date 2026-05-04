@@ -89,5 +89,5 @@ class School:
         print("Student Result")
         for key, value in self.classrooms.items():
             for student in value.students:
-                for k, i in 
-        pass
+                for k, i in student.marks.items():
+                    print(student.name,k,i,student.subject_grade[k])
