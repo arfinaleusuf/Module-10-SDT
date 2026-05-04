@@ -10,7 +10,8 @@ class School:
     def add_teacher(self, subject, teacher):
         self.teachers[subject] = teacher
     def student_addmission(self, student):
-        pass
+        classname = student.classroom.name
+        self.classrooms[classname].add_student(student)
     
     
     @staticmethod
@@ -61,8 +62,32 @@ class School:
     
     def __repr__(self):
         # All Classroom
+        for key in self.classrooms.key():
+            print(key)
         # All Student
+        print("All Students")
+        result = ''
+        for key, value in self.classrooms.items():  #prottekta classroom e gelam
+            result += f'----{key.upper()} Classroom Students\n'
+            for student in value.students:
+                result += f'{student.name}\n'
+        print(result)
         # All Subject
+        subject = ""
+        for key, value in self.classrooms.items():  #prottekta classroom e gelam
+            subject += f'----{key.upper()} Classroom Subjects\n'
+            for sub in value.subjects:
+                subject += f'{sub.name}\n'
+
+        print(subject)
+
         # All Teacher
+        teacher = ""
+        for key, value in self.teachers.items():
+            teacher += f'{teacher.name}\n'
         # All Student Result
+        print("Student Result")
+        for key, value in self.classrooms.items():
+            for student in value.students:
+                for k, i in 
         pass
