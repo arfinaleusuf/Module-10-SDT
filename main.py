@@ -52,5 +52,7 @@ ten.add_subject(physics)
 ten.add_subject(biology)
 
 eight.take_semestar_final_exam()
+nine.take_semestar_final_exam()
+ten.take_semestar_final_exam()
 
 print(school)

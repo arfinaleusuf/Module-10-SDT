@@ -8,7 +8,7 @@ class Teacher(Person):
     def __init__(self, name):
         super().__init__(name)
     def evalute_exam(self):
-        return random.randint(1, 100)
+        return random.randint(50, 100)
 
 class Student(Person):
     def __init__(self, name, classroom):
@@ -30,6 +30,7 @@ class Student(Person):
         else:
             gpa = sum / len(self.subject_grade)
             self.grade = School.value_to_grade(gpa)
+        return(f'{self.name} Final Grade : {self.grade} with GPA = {gpa}')
 
     # rohim .id ==
     @property
