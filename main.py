@@ -51,7 +51,7 @@ ten.add_subject(bangla)
 ten.add_subject(physics)
 ten.add_subject(biology)
 
-eight.take_semestar_final_exam()
+eight.take_semestar_final_exam() # calling exam
 nine.take_semestar_final_exam()
 ten.take_semestar_final_exam()
 
